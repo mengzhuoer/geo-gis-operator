@@ -46,7 +46,7 @@ Copy-Item -Recurse .\agent "$env:USERPROFILE\.minimax\agents\geo-gis-operator"
 
 | 位置 | 改什么 |
 |---|---|
-| `agent/agent.md` frontmatter | `defaultWorkspaceDir` → 你的项目目录 |
+| `agent/agent.md` frontmatter | `defaultWorkspaceDir` → 你的项目目录。**出厂为空字符串**——占位符(如 `<PROJECT_DIR>`)不是合法绝对路径,运行时 会以 `AGENT_CONFIG_INVALID` 拒绝加载整个智能体,所以必须填真实绝对路径或保持为空 |
 | `agent/agent.md`「Environment facts」表 | 软件版本与路径 → 你机器上的实际值 |
 | `agent/skills/geo-knowledge-base/references/project-conventions.md` | 坐标系、坐标序、方位角定义、图层命名规则 |
 

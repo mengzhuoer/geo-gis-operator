@@ -79,6 +79,8 @@ mavis agent get --name geo-gis-operator
 ### 安装后必改的三处
 
 1. `agent/agent.md` frontmatter 的 `defaultWorkspaceDir` → 你的项目目录
+   (出厂为**空字符串**;占位符不是合法绝对路径,运行时 会拒绝加载整个智能体,
+   必须填真实绝对路径或留空)
 2. `agent/agent.md` 的 **Environment facts** 表 → 你机器上的软件版本与路径
    (表中是作者机器的实测值,**先探测再改**,别直接照抄)
 3. `agent/skills/geo-knowledge-base/references/project-conventions.md` → 你项目的
