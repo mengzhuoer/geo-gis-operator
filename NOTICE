@@ -1,0 +1,42 @@
+# NOTICE
+
+## geo-gis-operator · 地理空间操作员
+
+Copyright (c) 2026 mengzhuoer (GitHub: @mengzhuoer)
+
+本作品依据 **GNU General Public License, Version 2** 发布,详见 [LICENSE](LICENSE)。
+
+---
+
+## 第三方内容
+
+本仓库包含或改编自以下第三方作品。完整清单见
+[THIRD_PARTY-LICENSES.md](THIRD_PARTY-LICENSES.md)。
+
+| 路径 | 来源 | 许可 |
+|---|---|---|
+| `agent/skills/qgis-ops/references/mcp-tools-reference.md` | `nkarasiak/qgis-mcp` — `.claude/skills/qgis-mcp-tools/SKILL.md` | GPL-2.0 |
+| `agent/skills/geo-knowledge-base/references/spectral-indices.md` | `awesome-spectral-indices/awesome-spectral-indices` | MIT |
+| `agent/skills/geo-knowledge-base/references/remote-sensing.md` | `矿地智预` (MineGeoAI-Pre) `backend/data/kb/geo-rs.md` | 同属本仓库作者 |
+| `agent/skills/cad-survey-drawing/` 中的经验条目 | `puran-water/autocad-drafting` | 未声明许可,仅提炼经验 |
+
+---
+
+## 商标与归属
+
+- **ArcGIS**、**ArcGIS Pro**、**Esri** 是 Esri 公司的商标。本仓库与 Esri 无隶属或背书关系。
+- **AutoCAD**、**AutoCAD LT** 是 Autodesk 公司的商标。本仓库与 Autodesk 无隶属或背书关系。
+- **QGIS** 是 QGIS 项目的作品。本仓库与 QGIS 基金��无隶属或背书关系。
+- **Google Earth Engine** 是 Google 公司的产品。本仓库与 Google 无隶属或背书关系。
+- 文档与代码中出现的具体地名、院校名、组别编号等,来自作者的实际工作场景,仅作示例,
+  不代表任何机构背书。
+
+---
+
+## 数据来源说明
+
+本仓库**不包含**任何测量成果数据、控制点坐标、遥感影像或底图。
+仓库内所有路径均为占位符或通用示例,不含任何真实测量数据。
+
+技能文档中引用的坐标数值(如 `E381579.94`、`ΔE = -557.7 m`)来自作者项目的**算例演示**,
+用于说明基准偏移检验的方法与量级,不构成任何测绘成果或精度声明。

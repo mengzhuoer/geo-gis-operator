@@ -1,0 +1,9 @@
+# Keep repository files with LF in the working tree to avoid CRLF churn on Windows.
+* text=auto eol=lf
+
+# Binary assets (if any are added later)
+*.png binary
+*.jpg binary
+*.gif binary
+*.zip binary
+*.pdf binary

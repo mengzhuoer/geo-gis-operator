@@ -1,0 +1,37 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# ---- Runtime / OS ----
+.agent-instance-id
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ---- Editors ----
+.vscode/
+.idea/
+*.swp
+
+# ---- GIS / CAD artifacts (never commit measurement data) ----
+*.gpkg
+*.gdb/
+*.tif
+*.tiff
+*.aux.xml
+*.dwg
+*.dxf
+*.bak
+*.FCStd
+*.FCBak
+*.qgz
+*.qgs
+
+# ---- Reports / local output ----
+成果/
+work/
+reports/
+*.log
