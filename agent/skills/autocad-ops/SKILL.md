@@ -5,7 +5,8 @@ description: |
   blocks to a drawing, annotating coordinates or elevations, exporting DXF, and checking
   entity counts and geometry. Works through the live AutoCAD COM API or headless via ezdxf.
   Does NOT cover QGIS (use qgis-ops), ArcGIS Pro (use arcgis-ops), or Google Earth Engine
-  (use gee-ops).license: GPL-2.0
+  (use gee-ops).
+license: GPL-2.0
 compatibility: Requires Windows with the matching GIS software installed; QGIS tasks need a running QGIS desktop, AutoCAD tasks need AutoCAD or ezdxf, ArcGIS tasks need ArcGIS Pro.
 metadata:
   author: mengzhuoer

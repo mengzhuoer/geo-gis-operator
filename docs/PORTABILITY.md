@@ -75,6 +75,20 @@ frontmatter 只有**六个**规范字段:
 脚本**只复制技能目录**,不碰任何客户端配置文件。
 MCP 配置请手动粘贴 [`MCP-CONFIG.md`](MCP-CONFIG.md) 里的片段。
 
+### 改完技能后先自检
+
+```powershell
+.\scripts\validate-skills.ps1
+```
+
+校验项:frontmatter 合法 YAML、`name` 合规且与目录同名、描述 ≤1024 字符、
+**触发词在第一句**、描述未把 `license:` 等字段粘连进去、
+references/scripts 引用的文件确实存在、正文不超过 500 行。
+
+> 第 6、7 项是真实踩过的坑:用脚本批量改写 frontmatter 时,块标量 `description: |`
+> 若末尾缺换行,`license:` 会粘到描述最后一行里。Claude Code 恰好容忍,
+> 但严格的客户端会解析出错。**每次改完 frontmatter 都要跑这个校验。**
+
 ---
 
 ## 四、能力矩阵:各客户端实际能做到什么

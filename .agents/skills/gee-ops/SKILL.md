@@ -5,7 +5,8 @@ description: |
   the Code Editor, exporting Sentinel-2/Landsat imagery or spectral indices (NDVI, NDBI,
   BSI, LST) by AOI and year, and checking Export task status. Covers GEE-specific data
   sources and export quota discipline. Does NOT cover local raster processing
-  (use qgis-ops or arcgis-ops).license: GPL-2.0
+  (use qgis-ops or arcgis-ops).
+license: GPL-2.0
 compatibility: Requires Windows with the matching GIS software installed; QGIS tasks need a running QGIS desktop, AutoCAD tasks need AutoCAD or ezdxf, ArcGIS tasks need ArcGIS Pro.
 metadata:
   author: mengzhuoer

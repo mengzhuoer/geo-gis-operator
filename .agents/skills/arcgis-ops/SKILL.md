@@ -5,7 +5,8 @@ description: |
   spatial analysis (buffer/clip/intersect/erase), raster processing, field calculation,
   and vector conversion. Runs geoprocessing in Pro's own Python environment
   (arcpy, not the system python). Does NOT cover QGIS (use qgis-ops), AutoCAD
-  (use autocad-ops), or Google Earth Engine (use gee-ops).license: GPL-2.0
+  (use autocad-ops), or Google Earth Engine (use gee-ops).
+license: GPL-2.0
 compatibility: Requires Windows with the matching GIS software installed; QGIS tasks need a running QGIS desktop, AutoCAD tasks need AutoCAD or ezdxf, ArcGIS tasks need ArcGIS Pro.
 metadata:
   author: mengzhuoer

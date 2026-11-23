@@ -5,7 +5,8 @@ description: |
   statistics tables, elevation correction, terrain grid generation, CASS data export, and
   AutoLISP batch drafting. Covers the Chinese ZZ* AutoLISP toolset (area label, area table,
   grid, cross-section) plus the encoding and SECURELOAD pitfalls that break it.
-  Does NOT cover general CAD editing (use autocad-ops).license: GPL-2.0
+  Does NOT cover general CAD editing (use autocad-ops).
+license: GPL-2.0
 compatibility: Requires Windows with the matching GIS software installed; QGIS tasks need a running QGIS desktop, AutoCAD tasks need AutoCAD or ezdxf, ArcGIS tasks need ArcGIS Pro.
 metadata:
   author: mengzhuoer

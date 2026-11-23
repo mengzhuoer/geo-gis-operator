@@ -6,7 +6,8 @@ description: |
   GeoPackage/GeoJSON/Shapefile. Drives a running QGIS desktop through the qgis MCP bridge
   (project, layer, features, field, editing, style, render, processing, query, analysis,
   transform). Does NOT cover ArcGIS Pro (use arcgis-ops), AutoCAD (use autocad-ops),
-  or Google Earth Engine (use gee-ops).license: GPL-2.0
+  or Google Earth Engine (use gee-ops).
+license: GPL-2.0
 compatibility: Requires Windows with the matching GIS software installed; QGIS tasks need a running QGIS desktop, AutoCAD tasks need AutoCAD or ezdxf, ArcGIS tasks need ArcGIS Pro.
 metadata:
   author: mengzhuoer

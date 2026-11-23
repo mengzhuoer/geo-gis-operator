@@ -6,7 +6,8 @@ description: |
   derivatives, spectral index formulas, classification accuracy (OA/Kappa), land-use transition
   matrices, and reproducibility requirements. Answers from a built-in knowledge base with
   citations instead of running any software. Does NOT cover executing GIS operations
-  (use qgis-ops / arcgis-ops / autocad-ops / gee-ops).license: GPL-2.0
+  (use qgis-ops / arcgis-ops / autocad-ops / gee-ops).
+license: GPL-2.0
 compatibility: Requires Windows with the matching GIS software installed; QGIS tasks need a running QGIS desktop, AutoCAD tasks need AutoCAD or ezdxf, ArcGIS tasks need ArcGIS Pro.
 metadata:
   author: mengzhuoer
