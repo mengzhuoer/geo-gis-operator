@@ -1,11 +1,15 @@
 ---
 name: arcgis-ops
 description: |
-  Run ArcGIS Pro geoprocessing through arcpy in Pro's own Python environment — FileGDB
-  workspaces, feature classes, spatial analysis (buffer/clip/intersect), raster processing,
-  field calculations, and batch vector conversion. Use for ArcGIS Pro-side work, or when the
-  user explicitly asks for arcpy, geoprocessing tools, or .gdb output. Do NOT use for QGIS
-  (use qgis-ops), AutoCAD (use autocad-ops), or GEE (use gee-ops).
+  Use when the task involves ArcGIS Pro or arcpy: FileGDB workspaces, feature classes,
+  spatial analysis (buffer/clip/intersect/erase), raster processing, field calculation,
+  and vector conversion. Runs geoprocessing in Pro's own Python environment
+  (arcpy, not the system python). Does NOT cover QGIS (use qgis-ops), AutoCAD
+  (use autocad-ops), or Google Earth Engine (use gee-ops).license: GPL-2.0
+compatibility: Requires Windows with the matching GIS software installed; QGIS tasks need a running QGIS desktop, AutoCAD tasks need AutoCAD or ezdxf, ArcGIS tasks need ArcGIS Pro.
+metadata:
+  author: mengzhuoer
+  version: "1.0"
 ---
 
 # ArcGIS Pro / arcpy Operations

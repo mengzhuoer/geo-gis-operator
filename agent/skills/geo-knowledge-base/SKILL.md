@@ -1,13 +1,16 @@
 ---
 name: geo-knowledge-base
 description: |
-  Answer surveying, coordinate-system and remote-sensing domain questions from a built-in
-  knowledge base — traverse computation, levelling adjustment, CGCS2000/UTM/Albers projection choice,
-  raster grid alignment, NDVI/NDBI/BSI/NDWI/SAVI/EVI index formulas, classification accuracy
-  (OA/Kappa), land-use transition matrices, and reproducibility requirements. Use when the user
-  asks "怎么算"、"这个坐标系对不对"、"这个指数什么意思"、"精度够不够" or any conceptual
-  geospatial question. Do NOT use for executing software operations (use qgis-ops / arcgis-ops /
-  autocad-ops / gee-ops).
+  Use when the user asks a conceptual geospatial question: traverse and levelling computation,
+  closure tolerances, coordinate systems and projection choice, raster grid alignment, DEM
+  derivatives, spectral index formulas, classification accuracy (OA/Kappa), land-use transition
+  matrices, and reproducibility requirements. Answers from a built-in knowledge base with
+  citations instead of running any software. Does NOT cover executing GIS operations
+  (use qgis-ops / arcgis-ops / autocad-ops / gee-ops).license: GPL-2.0
+compatibility: Requires Windows with the matching GIS software installed; QGIS tasks need a running QGIS desktop, AutoCAD tasks need AutoCAD or ezdxf, ArcGIS tasks need ArcGIS Pro.
+metadata:
+  author: mengzhuoer
+  version: "1.0"
 ---
 
 # Geospatial Knowledge Base

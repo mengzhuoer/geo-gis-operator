@@ -1,12 +1,15 @@
 ---
 name: autocad-ops
 description: |
-  Edit AutoCAD 2025 drawings and DXF files — add points, text, layers and blocks, export DXF, and
-  verify geometry — either through the live AutoCAD COM API or headless via ezdxf. Use for any
-  .dwg/.dxf task: adding survey points to a point map, annotating heights, editing layers, or
-  checking entity counts and coordinates. Use this skill when the user mentions AutoCAD, a .dwg or .dxf
-  file, a drawing, or CAD entity editing. Do NOT use for QGIS (use qgis-ops), ArcGIS Pro
-  (use arcgis-ops), or GEE (use gee-ops).
+  Use when the task involves AutoCAD or DWG/DXF files: adding points, text, layers and
+  blocks to a drawing, annotating coordinates or elevations, exporting DXF, and checking
+  entity counts and geometry. Works through the live AutoCAD COM API or headless via ezdxf.
+  Does NOT cover QGIS (use qgis-ops), ArcGIS Pro (use arcgis-ops), or Google Earth Engine
+  (use gee-ops).license: GPL-2.0
+compatibility: Requires Windows with the matching GIS software installed; QGIS tasks need a running QGIS desktop, AutoCAD tasks need AutoCAD or ezdxf, ArcGIS tasks need ArcGIS Pro.
+metadata:
+  author: mengzhuoer
+  version: "1.0"
 ---
 
 # AutoCAD Drawing Operations

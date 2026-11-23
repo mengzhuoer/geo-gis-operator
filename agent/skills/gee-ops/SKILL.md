@@ -1,11 +1,15 @@
 ---
 name: gee-ops
 description: |
-  Run Google Earth Engine jobs from this machine — author GEE JavaScript, inject it into the Code
-  Editor, submit batch Export tasks to Google Drive, and check task status. Use for exporting
-  Sentinel-2/Landsat imagery, spectral indices (NDVI/NDBI/BSI/LST), or any AOI/year/batch raster
-  pull from GEE. Do NOT use for local raster processing (use qgis-ops or arcgis-ops), and never
-  type the user's Google credentials for them.
+  Use when the task involves Google Earth Engine: authoring GEE JavaScript, running it in
+  the Code Editor, exporting Sentinel-2/Landsat imagery or spectral indices (NDVI, NDBI,
+  BSI, LST) by AOI and year, and checking Export task status. Covers GEE-specific data
+  sources and export quota discipline. Does NOT cover local raster processing
+  (use qgis-ops or arcgis-ops).license: GPL-2.0
+compatibility: Requires Windows with the matching GIS software installed; QGIS tasks need a running QGIS desktop, AutoCAD tasks need AutoCAD or ezdxf, ArcGIS tasks need ArcGIS Pro.
+metadata:
+  author: mengzhuoer
+  version: "1.0"
 ---
 
 # Google Earth Engine Operations

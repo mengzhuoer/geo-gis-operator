@@ -7,6 +7,11 @@
 
 不是"聊天式 GIS 顾问"——任务能在本机执行时,它就**真去执行**,然后报告跑出来的真实数字。
 
+> **技能包同时是跨客户端通用包。** 遵循开放的 Agent Skills 规范,
+> 同一份 `SKILL.md` 可被 Claude Code、Codex、Cursor、VS Code/Copilot、Gemini CLI、
+> OpenCode、Windsurf 原生加载。**已实测:Claude Code 2.1.220 独立发现全部 6 个技能并正确作答。**
+> 详见 [跨客户端兼容性](docs/PORTABILITY.md)。
+
 ---
 
 ## 它能做什么
@@ -47,7 +52,7 @@
 
 ## 安装
 
-### 方式 A(推荐):先建智能体,再覆盖文件
+### 方式 A:MiniMax Code 智能体(完整)
 
 ```powershell
 # 1) 在目标机器创建智能体
@@ -55,22 +60,30 @@
 #    mavis({ command: "agent create",
 #            args: { name: "geo-gis-operator", display_name: "地理空间操作员" } })
 
-# 2) 把本仓库的 agent/ 目录内容复制到
+# 2) 把本仓库 agent/ 目录内容复制到
 #    %USERPROFILE%\.minimax\agents\geo-gis-operator\
 ```
 
-### 方式 B:整体复制
+### 方式 B:跨客户端通用技能包(推荐给其他工具)
 
 ```powershell
-Copy-Item -Recurse .\agent "$env:USERPROFILE\.minimax\agents\geo-gis-operator"
+# 自动探测本机已装的客户端并安装(项目级)
+.\scripts\install.ps1
+
+# 用户级(所有项目可用)
+.\scripts\install.ps1 -UserScope
+
+# 只装指定客户端
+.\scripts\install.ps1 -Target claude,codex
 ```
 
-复制后若目标目录存在 `.agent-instance-id`,请删除它——那是本机运行时绑定,应由运行时重建。
+脚本**只复制技能目录,不碰任何客户端配置文件**。
+MCP 配置请手动粘贴 [docs/MCP-CONFIG.md](docs/MCP-CONFIG.md) 里的片段。
 
 ### 验证
 
 ```powershell
-mavis agent list                      # 应出现 geo-gis-operator
+mavis agent list                      # MiniMax Code: 应出现 geo-gis-operator
 mavis agent get --name geo-gis-operator
 ```
 
@@ -107,14 +120,30 @@ mavis agent get --name geo-gis-operator
 ├── LICENSE                       GPL-2.0
 ├── NOTICE                        版权与第三方来源声明
 ├── THIRD_PARTY-LICENSES.md       第三方组件许可清单
-├── agent/                        智能体本体(可直接复制安装)
+├── .agents/                      ★ 跨客户端技能单一源(Agent Skills 开放标准)
+│   └── skills/                     6 个技能包 + 8 份 reference + 1 个脚本
+├── agent/                        MiniMax Code 智能体本体(可直接复制安装)
 │   ├── agent.md                  系统提示词
 │   ├── config.yaml               模型配置
-│   └── skills/                   6 个技能包 + 8 份 reference + 1 个脚本
+│   └── skills/                   与 .agents/skills/ 同源(给该运行时用)
+├── scripts/
+│   └── install.ps1               跨客户端安装脚本(自动探测 + 只复制技能)
 └── docs/
-    ├── INSTALL.md                详细安装与验证
+    ├── PORTABILITY.md            跨客户端兼容性、规范符合度、能力矩阵、实测记录
+    ├── MCP-CONFIG.md             各客户端 MCP 配置片段(含根键差异与坑)
+    ├── INSTALL.md                详细安装与故障排查
     └── VERIFICATION.md           各项能力的实测验证记录
 ```
+
+### `.agents/skills/` 为什么是单一源
+
+Agent Skills 是**开放标准**,`.agents/skills/` 是跨客户端约定目录。
+多数客户端还会顺带扫描 `.claude/skills/` 与 `.codex/skills/`,
+所以放在 `.agents/` 往往一次就覆盖多个客户端。安装脚本负责分发到各家目录,
+避免手工复制粘贴。
+
+`agent/skills/` 与 `.agents/skills/` 内容同源:前者给 MiniMax Code 运行时用,
+后者是发布与分发的单一出处。改动后两边需保持一致(安装脚本不覆盖 `agent/` 目录)。
 
 ## 许可
 

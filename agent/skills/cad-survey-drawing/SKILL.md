@@ -1,11 +1,15 @@
 ---
 name: cad-survey-drawing
 description: |
-  Produce surveying drawings and CAD deliverables with AutoCAD — area annotation and area tables,
-  elevation correction, point thinning, CASS export, coordinate grid generation, and AutoLISP batch
-  drafting. Use this skill when the user mentions 测绘出图, 面积标注, 面积统计表, 高程改正,
-  地形图方格网, CASS, or AutoLISP/LISP drawing routines. Also covers the AutoCAD MCP server
-  integration options. Do NOT use for GIS analysis (use qgis-ops or arcgis-ops).
+  Use when the task involves surveying drawing output in AutoCAD: area annotation and area
+  statistics tables, elevation correction, terrain grid generation, CASS data export, and
+  AutoLISP batch drafting. Covers the Chinese ZZ* AutoLISP toolset (area label, area table,
+  grid, cross-section) plus the encoding and SECURELOAD pitfalls that break it.
+  Does NOT cover general CAD editing (use autocad-ops).license: GPL-2.0
+compatibility: Requires Windows with the matching GIS software installed; QGIS tasks need a running QGIS desktop, AutoCAD tasks need AutoCAD or ezdxf, ArcGIS tasks need ArcGIS Pro.
+metadata:
+  author: mengzhuoer
+  version: "1.0"
 ---
 
 # CAD Survey Drawing

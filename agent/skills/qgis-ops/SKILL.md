@@ -1,12 +1,16 @@
 ---
 name: qgis-ops
 description: |
-  Drive the running QGIS 3.44 desktop through the qgis MCP bridge — load projects, add/inspect layers,
-  style, run Processing algorithms, edit features and fields, query attributes, render maps, and author
-  print layouts. Use this skill for any QGIS-side task: reading a .qgz, producing a map image or PDF layout,
-  running a buffer/clip/raster op, fixing symbology, or exporting layers to GeoPackage/GeoJSON/Shapefile.
-  Load this skill when the user mentions QGIS, a .qgz project, a QGIS layer, or a QGIS print layout.
-  Do NOT use for ArcGIS Pro (use arcgis-ops), AutoCAD (use autocad-ops), or GEE (use gee-ops).
+  Use when the task involves QGIS: reading a .qgz project, inspecting or editing layers,
+  styling, running Processing algorithms, making maps and print layouts, or exporting to
+  GeoPackage/GeoJSON/Shapefile. Drives a running QGIS desktop through the qgis MCP bridge
+  (project, layer, features, field, editing, style, render, processing, query, analysis,
+  transform). Does NOT cover ArcGIS Pro (use arcgis-ops), AutoCAD (use autocad-ops),
+  or Google Earth Engine (use gee-ops).license: GPL-2.0
+compatibility: Requires Windows with the matching GIS software installed; QGIS tasks need a running QGIS desktop, AutoCAD tasks need AutoCAD or ezdxf, ArcGIS tasks need ArcGIS Pro.
+metadata:
+  author: mengzhuoer
+  version: "1.0"
 ---
 
 # QGIS Operations
